@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  h1 pixilat.es
+  p.tagline Pixelate images!
+  form(method="get", action="/", enctype="application/x-www-form-urlencoded")
+    div.field
+      div.imageField#imageUri
+        label(for="imageUriInput") URI:
+          em (http://i.imgur.com/Ta0yszw.jpg)
+        input(type="text", name="image", id="imageUriInput")
+      div.imageField#imageOr
+        span OR
+      div.imageFiled#imageFile
+        label(for="imageFileInput") File:
+        input(type="file", name="image", id="imageFileInput")
+    div.field
+      div#scale
+        label(for="scaleGet") Scale:
+          em (1 - 100)
+        input(type="text", name="scale", value=10)
+      div#coordinates
+        label Coordinates:
+         em (optionally pixelate only part of the image)
+        div.coordinate
+          label(for="coordx1get") x1:
+            input(type="text", name="x1", id="coordx1get")
+        div.coordinate
+          label(for="coordy1get") y1:
+            input(type="text", name="y1", id="coordy1get")
+        div.coordinate
+          label(for="coordx2get") x2:
+            input(type="text", name="x2", id="coordx2get")
+        div.coordinate
+          label(for="coordy2get") y2:
+            input(type="text", name="y2", id="coordy2get")
+    div.button
+      input(type="submit", name="pixelate", value="Submit", id="pixelateButton")
+  p.demo
+    a(href="/?image=http%3A%2F%2Fi.imgur.com%2FTa0yszw.jpg&scale=10&x1=390&y1=200&x2=570&y2=400") Try It

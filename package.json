@@ -1,0 +1,26 @@
+{
+  "name": "pixilat.es",
+  "version": "0.0.4",
+  "author": {
+    "name": "Brandon Aaron",
+    "email": "brandon.aaron@gmail.com"
+  },
+  "description": "A web service that pixelates images on the fly.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "stylus": "0.32.x",
+    "nib": "0.9.x",
+    "jade": "0.28.x",
+    "node-uuid": "1.4.x",
+    "express": "3.0.x",
+    "pixelator": "0.0.1"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.8"
+  },
+  "private": true
+}
